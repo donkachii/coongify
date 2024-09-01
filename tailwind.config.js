@@ -18,5 +18,38 @@ module.exports = {
       },
     },
   },
-  plugins: [nextui()],
+  plugins: [
+    nextui({
+      defaultTheme: "light",
+      defaultExtendTheme: "light",
+      themes: {
+        light: {
+          colors: {
+            primary: {
+              DEFAULT: "#F7813F",
+              foreground: "#000000",
+            },
+            secondary: {
+              foreground: "#FFFFFF",
+              DEFAULT: "#BBE4DC",
+            },
+            focus: "#F7813F",
+          },
+        },
+        dark: {
+          colors: {
+            primary: {
+              DEFAULT: "#F7813F",
+              foreground: "#000000",
+            },
+            secondary: {
+              foreground: "#FFFFFF",
+              DEFAULT: "#BBE4DC",
+            },
+            focus: "#F7813F",
+          },
+        },
+      },
+    }),
+  ],
 };
