@@ -47,8 +47,8 @@ const Header = () => {
             Features
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link color="foreground" href="#" aria-current="page">
+        <NavbarItem>
+          <Link color="foreground" href="#">
             About
           </Link>
         </NavbarItem>
