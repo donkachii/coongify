@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
-import { Readable } from "stream";
 
 const systemPrompt = `
 You are an advanced AI system designed to help university students navigate the complex world of professor selection and course planning. Your primary mission is to provide personalized, data-driven recommendations that empower students to make informed decisions about their academic journeys.
