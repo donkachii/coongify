@@ -1,6 +1,6 @@
 import { SlMicrophone } from 'react-icons/sl';
 import { CiMenuFries } from "react-icons/ci";
-import { FaArrowRightLong } from 'react-icons/fa6';
+import { FaArrowRightLong, FaCircle } from 'react-icons/fa6';
 import { RiVoiceprintLine } from 'react-icons/ri';
 import { VscFeedback } from 'react-icons/vsc';
 import { IoDocumentOutline } from 'react-icons/io5';
@@ -37,12 +37,18 @@ const features = [
 const Features = () => {
 	return (
 		<section
-			className='py-16 px-8 text-center '
+			className='p-28 text-center '
 			style={{
 				background:
 					'conic-gradient(from 0deg at 50% 50%, rgba(229, 141, 210, 0.20) 183.6deg, rgba(187, 228, 220, 0.20) 360deg), #FFF',
 			}}>
-			<h2 className='text-3xl font-bold mb-8'>Features</h2>
+			<div className='flex items-center justify-center'>
+				<h2 className='text-3xl font-bold mb-14 flex items-center'>
+					<FaCircle className='featureIcon' />{' '}
+					Features
+				</h2>
+			</div>
+
 			<div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
 				{features.map((feature, index) => (
 					<div key={index} className='containerDiv '>

@@ -59,17 +59,19 @@ const Header = () => {
 
 			<NavbarContent justify='end'>
 				<NavbarItem className='hidden lg:flex'>
-					<Button
-						as={Link}
-						href='#'
-						className='bg-orange-500 text-white'
-						radius='full'>
-						Sign Up
-					</Button>
+					<a href='/signup'>
+						<button
+							as={Link}
+							href='#'
+							className='bg-orange-500 text-white rounded-full p-2'
+							radius='full'>
+							Sign Up
+						</button>
+					</a>
 				</NavbarItem>
 				<NavbarItem>
 					<Link
-						href='#'
+						href='/signin'
 						className='text-black px-4 py-2 rounded-md hover:bg-gray-100'>
 						Login
 					</Link>

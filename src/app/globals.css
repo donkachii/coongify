@@ -21,7 +21,7 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  @apply text-7xl
+  @apply text-7xl mb-8;
 
 }
 /* ........................features........................... */
@@ -29,10 +29,32 @@
   @apply flex flex-col justify-center items-center bg-white rounded-full shadow-lg w-72 h-64 mx-auto;
   border-radius:50%;
 }
+.featureIcon{
+  color: #BBE4DC;
+  @apply mr-2;
+}
 .title{
   @apply text-lg font-semibold mb-2
 }
 .des{
   @apply text-gray-600;
   font-size:13px;
+}
+/* ...................................about.................... */
+.aboutIcon{
+  color: #F7813F;
+}
+.group{
+  background-image: url('/serious.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @apply max-w-5xl mx-auto grid md:grid-cols-2
+}
+.aboutText{
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  @apply border-2 border-gray-500 rounded
 }
