@@ -1,60 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Linden+Hill:ital@0;1&family=Roboto+Slab:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Linden+Hill:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Linden+Hill:ital@0;1&family=Roboto+Slab:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Linden+Hill:ital@0;1&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.headText{
-  font-family: 'Linden Hill', serif;
+.headText {
+  font-family: "Linden Hill", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
 }
-.headTitle{
+.headTitle {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  @apply text-7xl mb-8;
-
+  @apply mb-8 text-7xl leading-[1.7];
 }
 /* ........................features........................... */
-.containerDiv{
-  @apply flex flex-col justify-center items-center bg-white rounded-full shadow-lg w-72 h-64 mx-auto;
-  border-radius:50%;
+.containerDiv {
+  @apply flex flex-col items-center justify-center h-64 mx-auto bg-white rounded-full shadow-lg w-72;
+  border-radius: 50%;
 }
-.featureIcon{
-  color: #BBE4DC;
+.featureIcon {
+  color: #bbe4dc;
   @apply mr-2;
 }
-.title{
-  @apply text-lg font-semibold mb-2
+.title {
+  @apply mb-2 text-lg font-semibold;
 }
-.des{
+.des {
   @apply text-gray-600;
-  font-size:13px;
+  font-size: 13px;
 }
 /* ...................................about.................... */
-.aboutIcon{
-  color: #F7813F;
+.aboutIcon {
+  color: #f7813f;
 }
-.group{
-  background-image: url('/serious.png');
+.group {
+  background-image: url("/serious.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @apply max-w-5xl mx-auto grid md:grid-cols-2
+  @apply grid max-w-5xl mx-auto md:grid-cols-2;
 }
-.aboutText{
+.aboutText {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
-  @apply border-2 border-gray-500 rounded
+  @apply border-2 border-gray-500 rounded;
 }
