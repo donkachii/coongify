@@ -5,6 +5,7 @@ import { AudioRecorder, useAudioRecorder } from "react-audio-voice-recorder";
 import Markdown from "react-markdown";
 
 const VoiceAssistant = () => {
+  const [isWaitingAIResponse, setIsWaitingAIResponse] = useState("");
   const recordingControl = useAudioRecorder();
 
   const sendChat = async () => {
@@ -51,7 +52,39 @@ const VoiceAssistant = () => {
     }
   };
 
-  const onAudioRecordingComplete = () => {};
+  const onAudioRecordingComplete = async () => {
+    setIsWaitingAIResponse(true);
+    const audioFile = new File([userAudioData], "userVoiceInput", {
+      type: "audio/mpeg",
+    });
+    const formData = new FormData();
+    formData.append("file", audioFile);
+
+    const response = await fetch("/api/upload-audio", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+    const audioUrl = data.url;
+    const audioBlob = await fetch(audioUrl).then((res) => res.blob());
+    const audioFile2 = new File([audioBlob], "userVoiceInput", {
+      type: "audio/mpeg",
+    });
+    const formData2 = new FormData();
+    formData2.append("file", audioFile2);
+    const response2 = await fetch("/api/chat", {
+      method: "POST",
+      body: formData2,
+    });
+    const data2 = await response2.json();
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { role: "user", content: data2 },
+      { role: "assistant", content: "" },
+    ]);
+
+    setIsWaitingAIResponse(false);
+  };
 
   return (
     <div>
