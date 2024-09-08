@@ -1,6 +1,5 @@
-import Image from 'next/image';
-import group from '../../public/assets/images/group.jpeg';
 import { FaCircle } from 'react-icons/fa6';
+import Writeup from './Writeup';
 
 const About = () => {
 	return (
@@ -17,34 +16,7 @@ const About = () => {
 					</h2>
 				</div>
 			</section>
-
-			<div className=' group w-full h-96 pb-8 relative'>
-				<div className='flex justify-center items-center flex-col md:flex-row '>
-					<Image
-						src={group}
-						alt='group'
-						width={400}
-						height={300}
-						className='rounded-full shadow-lg'
-					/>
-				</div>
-
-				<div className='bg-white shadow-md w-96 p-12 rounded-full md:ml-[-100px] mt-[-50px] absolute left-96 top-40'>
-					<p className='text-gray-800 text-[14px] '>
-						At{' '}
-						<span className='text-[#F37934] font-semibold'>Coongrify</span>,
-					 we believe that learning should be accessible to everyone. Our
-						mission is to empower visually impaired individuals through
-						cutting-edge text-to-speech technology, making educational content
-						easier to access and more engaging. With a focus on personalized
-						user experiences, we strive to enhance the way our users interact
-						with information, enabling them to learn more efficiently and
-						independently. At Vocal Visioon, we're committed to breaking down
-						barriers and providing tools that make a real difference in the
-						lives of our users.
-					</p>
-				</div>
-			</div>
+			<Writeup/>
 		</>
 	);
 };

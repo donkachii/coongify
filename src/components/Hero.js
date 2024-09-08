@@ -18,10 +18,10 @@ const Heros = () => {
         </h1>
 
         <div className="flex item-center ">
-          <button className="px-6 py-5 text-white bg-orange-500 rounded-full">
+          <button className="p-4 text-white bg-orange-500 rounded-full">
             Explore More
           </button>
-          <span className="mt-2 ml-4 text-lg font-bold">Get Started</span>
+          <span className="mt-4 ml-4 text-lg font-bold">Get Started</span>
         </div>
       </div>
 

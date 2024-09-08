@@ -48,7 +48,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  @apply grid max-w-5xl mx-auto md:grid-cols-2;
+  width:100%;
+ 
 }
 .aboutText {
   font-family: "Roboto Slab", serif;
@@ -56,4 +57,17 @@
   font-weight: 500;
   font-style: normal;
   @apply border-2 border-gray-500 rounded;
+}
+/* ...........................................footer..................... */
+.footer-bg {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color:#bbe4dc;
+  @apply p-24;
+}
+.ul{
+  @apply mt-4 space-y-2;
+  font-size: 13px;
 }
