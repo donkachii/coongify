@@ -90,9 +90,6 @@ const VoiceAssistant = () => {
 
     setIsWaitingAIResponse(false);
   };
-  console.log("🚀 ~ onAudioRecordingComplete ~ setAudioURL:", setAudioURL);
-
-  console.log(message);
 
   return (
     <section
